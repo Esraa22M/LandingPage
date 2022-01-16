@@ -3,7 +3,6 @@
 * css 
 * html
 * css animation
-
 # Design
 * Header 
 ![alt text](https://github.com/Esraa22M/LandingPage/blob/master/images/Design/Header.png)
