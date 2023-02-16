@@ -1,0 +1,85 @@
+.card-container{
+    display: flex;
+    min-height: 50vh;
+    place-items: center;
+    line-height: 1.6;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card-1,.card-2,.card-3{
+    background-size: cover;
+    background-position: center;
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    border-radius: 0.5rem;
+    margin: 2rem 1.5rem;
+     overflow: hidden; 
+    transition: transform 500ms ease;
+}
+.card-1{
+    background-image: url("../images/cardImage1.jpg");
+}
+.card-2{
+    background-image: url("../images/cardImage2.jpg");
+}
+.card-3{
+    background-image: url("../images/cardImage3.jpg");
+}
+.card-content{
+    --padding: 1.5rem;
+    padding: var(--padding);
+    color: var(--color-netural-100);
+
+    background-color: rgba(0,0,0, .5);
+    transform: translateY(80%);
+    transition: transform 500ms ease;
+
+}
+.card-title{
+    position: relative;
+    width:max-content;
+}
+.card-title::after{
+    content: '';
+    height: 3px;
+    width: calc(100% + var(--padding));
+    position: absolute;
+    background-color:var( --color-accent-400) ;
+    left: calc(var(--padding)*-1);
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 1000ms ease;
+}
+.card-content >*:not(.card-title){
+    opacity: 0;
+    transition:  opacity  500ms linear;
+}
+.card-1:hover .card-content>*,.card-2:hover .card-content>*,.card-3:hover .card-content >*{
+    opacity: 1;
+}
+/*----------------------------card animation-------------------------------------*/
+.card-1:hover,.card-2:hover,.card-3:hover{
+    transform: scale(1.05);
+    margin-top: 2.5rem;
+}
+.card-1:hover .card-title::after,.card-2:hover .card-title::after,.card-3:hover .card-title::after{
+    transform: scaleX(1);
+}
+.card-1:hover .card-content,.card-2:hover .card-content,.card-3:hover .card-content{
+    transform: translateY(0);
+
+}
+/*-----------------------------------------button styling-----------------------------------*/
+.button{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-netural-900);
+    background-color: var(--color-accent-400);
+    padding: 0.5em 1.5em;
+    border-radius: 0.25rem;
+}
+.button:hover,.button:focus{
+    background-color: var(--color-white);
+}

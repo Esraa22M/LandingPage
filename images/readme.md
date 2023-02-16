@@ -12,3 +12,5 @@
 
 * Footer
 ![alt text](https://github.com/Esraa22M/LandingPage/blob/master/images/Design/Footer.png)
+
+
